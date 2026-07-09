@@ -1,2 +1,20 @@
-# Library-Management-System
-A web-based Library Management System developed with Flask (Python), HTML, CSS, and MySQL. This project allows efficient management of student data, fee tracking, and attendance monitoring with a clean and responsive interface.
+# My First Project 🚀
+
+## 👩‍💻 About Me
+Hi, I am Aradhya  
+I am learning Web Development and Python.
+
+## 📌 Project Description
+This is my first GitHub project.  
+I am practicing HTML, CSS and Flask.
+
+## 🛠️ Technologies Used
+- HTML
+- CSS
+- Python (Flask)
+
+## 🎯 Goal
+To become a Software Developer.
+
+## 📞 Contact
+Email: aradhyamaurya3110@gmail.com
