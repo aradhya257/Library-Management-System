@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Student</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/dashboard.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="sidebar">
+        <h2>Library<br>Management<br>System</h2>
+
+        <a href="{{ url_for('dashboard') }}">Add Book</a>
+        <a href="{{ url_for('book_report') }}">Book Report</a>
+        <a href="{{ url_for('book_request') }}">Book Request</a>
+        <a href="{{ url_for('request_report') }}">Request Report</a>
+        <a href="{{ url_for('add_student_page') }}">Add Student</a>
+        <a href="{{ url_for('student_report') }}">Student Report</a>
+        <a href="{{ url_for('issued_books') }}">Issued Books</a>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+
+    <div class="main">
+        <h1>Add Student</h1>
+
+        <form method="POST" action="{{ url_for('add_student') }}">
+
+            <label>Student Name</label>
+            <input type="text" name="student_name" required>
+
+            <label>Roll No</label>
+            <input type="text" name="roll_no" required>
+
+            <label>Branch</label>
+            <select name="branch" required>
+                <option value="">Select Branch</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Mechanical">Mechanical</option>
+                <option value="Civil">Civil</option>
+                <option value="Electrical">Electrical</option>
+            </select>
+
+            <label>Year</label>
+            <input type="text" name="year" required>
+
+            <label>Mobile</label>
+            <input type="text" name="mobile" required>
+
+            <button type="submit">Add Student</button>
+
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>

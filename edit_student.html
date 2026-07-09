@@ -1,0 +1,10 @@
+<h2>Edit Student</h2>
+
+<form method="post" action="{{ url_for('update_student', id=student.id) }}">
+    <input name="student_name" value="{{ student.student_name }}">
+    <input name="roll_no" value="{{ student.roll_no }}">
+    <input name="branch" value="{{ student.branch }}">
+    <input name="year" value="{{ student.year }}">
+    <input name="mobile" value="{{ student.mobile }}">
+    <button type="submit">Update</button>
+</form>

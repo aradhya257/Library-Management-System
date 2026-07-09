@@ -1,0 +1,11 @@
+<h2>Edit Book</h2>
+
+<form method="post" action="{{ url_for('update_book', id=book.id) }}">
+    <input name="book_name" value="{{ book.book_name }}">
+    <input name="author" value="{{ book.author }}">
+    <input name="publication" value="{{ book.publication }}">
+    <input name="branch" value="{{ book.branch }}">
+    <input name="price" value="{{ book.price }}">
+    <input name="quantity" value="{{ book.quantity }}">
+    <button type="submit">Update</button>
+</form>

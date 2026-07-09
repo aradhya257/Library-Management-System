@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Request Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Library<br>Management<br>System</h2>
+
+        <a href="{{ url_for('dashboard') }}">Add Book</a>
+        <a href="{{ url_for('book_report') }}">Book Report</a>
+        <a href="{{ url_for('book_request') }}">Book Request</a>
+        <a href="{{ url_for('request_report') }}">Request Report</a>
+        <a href="{{ url_for('add_student_page') }}">Add Student</a>
+        <a href="{{ url_for('student_report') }}">Student Report</a>
+        <a href="{{ url_for('issued_books') }}">Issued Books</a>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+        <h1>Book Request Report</h1>
+
+        <table border="1" cellpadding="10">
+            <tr>
+                <th>ID</th>
+                <th>Student</th>
+                <th>Book</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+
+            {% for r in requests %}
+            <tr>
+                <td>{{ r.id }}</td>
+                <td>{{ r.student_name }}</td>
+                <td>{{ r.book_name }}</td>
+                <td>{{ r.request_date }}</td>
+                <td>{{ r.status }}</td>
+                <td>
+                    {% if r.status == 'Pending' %}
+                        <a href="{{ url_for('approve_request',request_id=r.id) }}">Approve</a>
+                        |
+                    {% else %}
+                        Approved |
+                    {% endif %}
+
+                    <a href="{{ url_for('delete_request', id=r.id) }}"
+                       onclick="return confirm('Are you sure you want to delete this request?')">
+                       Delete
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+</div>
+
+</body>
+</html>
