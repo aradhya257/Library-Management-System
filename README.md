@@ -1,20 +1,33 @@
-# My First Project 🚀
+# 📚 Library Management System
 
-## 👩‍💻 About Me
-Hi, I am Aradhya  
-I am learning Web Development and Python.
+## 🚀 About Project
+This is a Library Management System built using Flask.  
+It helps manage student records, book issuing, and reports.
 
-## 📌 Project Description
-This is my first GitHub project.  
-I am practicing HTML, CSS and Flask.
+## ✨ Features
+- Add Student
+- Edit Student
+- Book Request
+- Issue Books
+- Dashboard
+- Reports
 
-## 🛠️ Technologies Used
+## 🛠️ Tech Stack
 - HTML
 - CSS
+- JavaScript
 - Python (Flask)
+- MySQL
 
-## 🎯 Goal
-To become a Software Developer.
+## 📂 Project Structure
+- Templates (HTML files)
+- app.py (Main backend)
+- library.sql (Database)
 
-## 📞 Contact
-Email: aradhyamaurya3110@gmail.com
+## ▶️ How to Run
+1. Install requirements
+2. Run app.py
+3. Open browser
+
+## 👨‍💻 Author
+Aradhya
