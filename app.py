@@ -39,9 +39,9 @@ def login():
             session['user'] = username
             return redirect(url_for('dashboard'))
         else:
-            return render_template('index.html', error="Invalid Username or Password")
+            return render_template('login.html', error="Invalid Username or Password")
 
-    return render_template('index.html')
+    return render_template('login.html')
 
 # ---------------- DASHBOARD ----------------
 @app.route('/dashboard')
@@ -92,5 +92,5 @@ def logout():
 
 # ---------------- RUN SERVER ----------------
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))
+    port = int(os.environ.get("PORT", 10000))
     app.run(host="0.0.0.0", port=port)
